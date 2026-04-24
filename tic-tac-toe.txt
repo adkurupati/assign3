@@ -18,3 +18,16 @@ I tested the game in the browser to confirm that:
 - A winner is detected properly
 - No further moves are allowed after a win
 
+I continued following the React tic-tac-toe tutorial and added a Game component to manage the overall game state.
+
+I implemented history tracking using useState so that each move is stored. The history array keeps track of all past board states, and the current move index determines which board is displayed.
+
+I added move handling logic so that when a square is clicked, a new board state is created and appended to the history. The current player alternates between X and O based on the move number.
+
+I verified that:
+- Clicking squares updates the board correctly
+- Players alternate turns
+- The game correctly determines a winner
+- No further moves are allowed after a win
+
+I tested the application in the browser to confirm that the game behaves as expected.
