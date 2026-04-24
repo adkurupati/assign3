@@ -31,3 +31,18 @@ I verified that:
 - No further moves are allowed after a win
 
 I tested the application in the browser to confirm that the game behaves as expected.
+
+Added time-travel functionality to the tic-tac-toe game.
+
+I implemented move history tracking using a history array stored in state. Each time a move is made, a new board state is created and appended to the history instead of modifying the existing state.
+
+I added a currentMove (or stepNumber) state to keep track of which move is currently being viewed. This allows navigation through previous moves.
+
+I implemented buttons (or controls) that allow jumping to previous moves by updating the currentMove state and rendering the corresponding board state from the history array.
+
+I verified that:
+- The history correctly stores each board state
+- Clicking past moves updates the board correctly
+- New moves overwrite future history when jumping back
+
+Note: The time-travel feature is not required for the assignment, but I implemented it to better understand React state management.

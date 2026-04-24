@@ -113,3 +113,30 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+function countPieces(squares, player) {
+  return squares.filter((square) => square === player).length;
+}
+
+function isAdjacent(a, b) {
+  const rowA = Math.floor(a / 3);
+  const colA = a % 3;
+  const rowB = Math.floor(b / 3);
+  const colB = b % 3;
+
+  return Math.abs(rowA - rowB) <= 1 && Math.abs(colA - colB) <= 1;
+}
+
+function isLegalCenterMove(oldSquares, newSquares, player, from) {
+  const center = 4;
+
+  if (oldSquares[center] !== player) {
+    return true;
+  }
+
+  if (calculateWinner(newSquares) === player) {
+    return true;
+  }
+
+  return from === center;
+}
