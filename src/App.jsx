@@ -24,6 +24,26 @@ function Board({ xIsNext, squares, onPlay, selectedSquare, setSelectedSquare }) 
       onPlay(nextSquares);
       return;
     }
+
+    if (selectedSquare === null) {
+      if (squares[i] === currentPlayer) {
+        setSelectedSquare(i);
+      }
+      return;
+    }
+
+    const from = selectedSquare;
+    const to = i;
+
+    if (squares[to] === null) {
+      const nextSquares = squares.slice();
+      nextSquares[to] = currentPlayer;
+      nextSquares[from] = null;
+
+      onPlay(nextSquares);
+    }
+
+    setSelectedSquare(null);
   }
 
   const winner = calculateWinner(squares);

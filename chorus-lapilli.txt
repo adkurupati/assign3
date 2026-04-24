@@ -2,3 +2,10 @@ Started converting the tic-tac-toe game into chorus lapilli. I added helper func
 I saved the file and confirmed that the app still runs after adding these helper functions.
 
 Added state to track a selected square for the movement phase. I introduced a selectedSquare variable in the Game component and passed it down to the Board component so it can later support two-click piece movement.
+
+Modified the click handling logic in the Board component to begin implementing chorus lapilli rules. I added logic to count how many pieces the current player has on the board and restricted piece placement so that each player can only place up to three pieces.
+After a player has three pieces, additional clicks on empty squares no longer place new pieces. This prepares the game for the next phase, where players will move existing pieces instead of placing new ones.
+I tested the application in the browser to confirm that:
+- Players can place pieces normally up to three pieces each
+- After reaching three pieces, no additional pieces can be placed
+- The game still correctly alternates turns and detects a winner
