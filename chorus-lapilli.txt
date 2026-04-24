@@ -1,0 +1,2 @@
+Started converting the tic-tac-toe game into chorus lapilli. I added helper functions to count how many pieces each player has, check whether two board positions are adjacent, and enforce the special center-square movement rule.
+I saved the file and confirmed that the app still runs after adding these helper functions.
