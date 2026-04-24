@@ -1,17 +1,11 @@
 Started Assignment 3 setup locally on my MacBook. I opened the assign3 project in VS Code and ran the development server with ./helper dev. The app loaded in Chrome at http://localhost:5173/.
-
 I opened src/App.jsx and replaced the ReactBootstrap starter example with the first static tic-tac-toe board from the React tutorial. The board currently displays nine buttons arranged in three rows, numbered 1 through 9.
-
 I saved App.jsx and checked the browser preview to confirm the board appeared. I committed this first change with the message "Start tic tac toe board" and pushed it to GitHub.
 
 Continued following the React tic-tac-toe tutorial.
-
 I updated the board to be interactive by adding state using useState. Each square now updates to X or O when clicked, and the players alternate turns correctly.
-
 I implemented a Square component that takes props and displays the current value. I lifted the state up to the Board component so that all squares share the same game state.
-
 I added logic to detect a winner by checking rows, columns, and diagonals. When a player wins, the game displays the winner and prevents further moves.
-
 I tested the game in the browser to confirm that:
 - Clicking squares places X and O
 - Turns alternate correctly
@@ -19,11 +13,8 @@ I tested the game in the browser to confirm that:
 - No further moves are allowed after a win
 
 I continued following the React tic-tac-toe tutorial and added a Game component to manage the overall game state.
-
 I implemented history tracking using useState so that each move is stored. The history array keeps track of all past board states, and the current move index determines which board is displayed.
-
 I added move handling logic so that when a square is clicked, a new board state is created and appended to the history. The current player alternates between X and O based on the move number.
-
 I verified that:
 - Clicking squares updates the board correctly
 - Players alternate turns
@@ -31,15 +22,10 @@ I verified that:
 - No further moves are allowed after a win
 
 I tested the application in the browser to confirm that the game behaves as expected.
-
 Added time-travel functionality to the tic-tac-toe game.
-
 I implemented move history tracking using a history array stored in state. Each time a move is made, a new board state is created and appended to the history instead of modifying the existing state.
-
 I added a currentMove (or stepNumber) state to keep track of which move is currently being viewed. This allows navigation through previous moves.
-
 I implemented buttons (or controls) that allow jumping to previous moves by updating the currentMove state and rendering the corresponding board state from the history array.
-
 I verified that:
 - The history correctly stores each board state
 - Clicking past moves updates the board correctly
