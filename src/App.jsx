@@ -35,7 +35,7 @@ function Board({ xIsNext, squares, onPlay, selectedSquare, setSelectedSquare }) 
     const from = selectedSquare;
     const to = i;
 
-    if (squares[to] === null) {
+    if (squares[to] === null && isAdjacent(from, to)) {
       const nextSquares = squares.slice();
       nextSquares[to] = currentPlayer;
       nextSquares[from] = null;

@@ -19,3 +19,5 @@ I tested the behavior in the browser and confirmed that:
 - Players can no longer place new pieces after reaching three pieces
 - Players can select and move their pieces using two clicks
 - The game still alternates turns correctly
+
+Added adjacency restrictions to the movement phase. I updated the move logic so that a piece can only be moved to an adjacent square (including diagonals). I verified that moves to non-adjacent squares are rejected and the selection resets after each attempted move.
