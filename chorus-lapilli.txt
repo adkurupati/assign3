@@ -1,2 +1,4 @@
 Started converting the tic-tac-toe game into chorus lapilli. I added helper functions to count how many pieces each player has, check whether two board positions are adjacent, and enforce the special center-square movement rule.
 I saved the file and confirmed that the app still runs after adding these helper functions.
+
+Added state to track a selected square for the movement phase. I introduced a selectedSquare variable in the Game component and passed it down to the Board component so it can later support two-click piece movement.

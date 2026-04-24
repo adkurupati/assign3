@@ -10,16 +10,20 @@ function Square({ value, onSquareClick }) {
 
 function Board({ xIsNext, squares, onPlay, selectedSquare, setSelectedSquare }) {
   function handleClick(i) {
-    if (calculateWinner(squares) || squares[i]) {
+    const winner = calculateWinner(squares);
+    if (winner) return;
+
+    const currentPlayer = xIsNext ? 'X' : 'O';
+    const playerPieces = countPieces(squares, currentPlayer);
+
+    if (playerPieces < 3) {
+      if (squares[i]) return;
+
+      const nextSquares = squares.slice();
+      nextSquares[i] = currentPlayer;
+      onPlay(nextSquares);
       return;
     }
-    const nextSquares = squares.slice();
-    if (xIsNext) {
-      nextSquares[i] = 'X';
-    } else {
-      nextSquares[i] = 'O';
-    }
-    onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
