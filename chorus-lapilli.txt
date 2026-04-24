@@ -21,3 +21,5 @@ I tested the behavior in the browser and confirmed that:
 - The game still alternates turns correctly
 
 Added adjacency restrictions to the movement phase. I updated the move logic so that a piece can only be moved to an adjacent square (including diagonals). I verified that moves to non-adjacent squares are rejected and the selection resets after each attempted move.
+Implemented the special center-square rule for chorus lapilli. I updated the movement logic so that if the current player has a piece in the center square, their move must either create a winning position or move the center piece out of the center.
+I tested the rule by setting up positions where a player had the center square and verified that moving a different piece without winning was rejected, while moving the center piece was allowed.

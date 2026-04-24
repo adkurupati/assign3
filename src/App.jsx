@@ -40,7 +40,9 @@ function Board({ xIsNext, squares, onPlay, selectedSquare, setSelectedSquare }) 
       nextSquares[to] = currentPlayer;
       nextSquares[from] = null;
 
-      onPlay(nextSquares);
+      if (isLegalCenterMove(squares, nextSquares, currentPlayer, from)) {
+        onPlay(nextSquares);
+      }
     }
 
     setSelectedSquare(null);
