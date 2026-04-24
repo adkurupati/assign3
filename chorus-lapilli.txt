@@ -9,3 +9,13 @@ I tested the application in the browser to confirm that:
 - Players can place pieces normally up to three pieces each
 - After reaching three pieces, no additional pieces can be placed
 - The game still correctly alternates turns and detects a winner
+
+Implemented the basic movement phase for chorus lapilli. After a player has placed three pieces, the game switches from placing new pieces to moving existing ones.
+I implemented a two-click system:
+- The first click selects one of the current player's pieces
+- The second click selects a destination square
+If the destination square is empty, the selected piece is moved there. After the move, the selection resets.
+I tested the behavior in the browser and confirmed that:
+- Players can no longer place new pieces after reaching three pieces
+- Players can select and move their pieces using two clicks
+- The game still alternates turns correctly
