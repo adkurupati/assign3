@@ -1,0 +1,20 @@
+Started Assignment 3 setup locally on my MacBook. I opened the assign3 project in VS Code and ran the development server with ./helper dev. The app loaded in Chrome at http://localhost:5173/.
+
+I opened src/App.jsx and replaced the ReactBootstrap starter example with the first static tic-tac-toe board from the React tutorial. The board currently displays nine buttons arranged in three rows, numbered 1 through 9.
+
+I saved App.jsx and checked the browser preview to confirm the board appeared. I committed this first change with the message "Start tic tac toe board" and pushed it to GitHub.
+
+Continued following the React tic-tac-toe tutorial.
+
+I updated the board to be interactive by adding state using useState. Each square now updates to X or O when clicked, and the players alternate turns correctly.
+
+I implemented a Square component that takes props and displays the current value. I lifted the state up to the Board component so that all squares share the same game state.
+
+I added logic to detect a winner by checking rows, columns, and diagonals. When a player wins, the game displays the winner and prevents further moves.
+
+I tested the game in the browser to confirm that:
+- Clicking squares places X and O
+- Turns alternate correctly
+- A winner is detected properly
+- No further moves are allowed after a win
+
