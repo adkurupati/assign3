@@ -93,6 +93,7 @@ export default function Game() {
 
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
+    setSelectedSquare(null);
   }
 
   const moves = history.map((squares, move) => {
